@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react'
 import CardsList from './Components/CardsList'
+import Nav from './Components/Nav'
 import axios from 'axios'
 import logo from './Logos/github.png';
 
@@ -29,8 +30,6 @@ state = {
   {
     const displayedContacts = 30 ;
     const initialPage = 1 ;
-    console.log("state")
-    console.log(this.state);
     if (this.state.pageNumber<= (this.state.total/displayedContacts))
     {
       this.setState((prevState)=>({pageNumber:prevState.pageNumber+1,update:true}),()=>(console.log(this.state.pageNumber)))
@@ -43,6 +42,8 @@ state = {
     }
 
   }
+
+ 
   render(){
   return (
     <div className="App">
@@ -54,7 +55,7 @@ state = {
       this.state.total?
       (<CardsList repos={this.state.repos}/>):(null)
       }
-     <button onClick={this.inc}>NEXT</button>
+     <Nav navigate={this.inc}/>
     </div>
   );
 }
