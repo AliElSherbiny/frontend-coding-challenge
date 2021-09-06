@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 .App {
   text-align: center;
 background: rgb(2,0,36);
@@ -37,4 +47,35 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(71,164,171,0.54415269
   to {
     transform: rotate(360deg);
   }
+}
+
+.header
+{
+  font-family: 'Century Gothic';
+  font-size: 30px ;
+  font-weight: bold;
+  margin:0 auto;
+  color: antiquewhite;
+  border-radius: 1%;
+  
+  height:100px;
+  width:100%;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(71,164,171,0.5441526952577906) 100%, rgba(0,212,255,1) 100%);
+ 
+} 
+
+
+.header > .content {
+  float:left;
+  margin-top:30px;
+
+}
+
+.header > .headerimg {
+  float:right;
+  width:100px;
+  height:100px;
+  border-radius: 100%;
+  margin-right: 20px;
 }

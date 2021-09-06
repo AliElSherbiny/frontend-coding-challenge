@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react'
 import CardsList from './Components/CardsList'
 import axios from 'axios'
+import logo from './Logos/github.png';
 
 class App extends Component {
 state = {
@@ -17,10 +18,15 @@ state = {
   render(){
   return (
     <div className="App">
+      <div className="header">
+         <div className="content">GIT MOST STARRED REPOS</div>
+         <img src={logo} alt="github logo" className="headerimg"/>
+         </div>
       {
       this.state.total?
       (<CardsList repos={this.state.repos}/>):(null)
       }
+     
     </div>
   );
 }
