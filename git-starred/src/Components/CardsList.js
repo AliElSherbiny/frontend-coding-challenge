@@ -1,5 +1,7 @@
 import { Component } from "react";
 import Card from "./Card.js"
+import  './CardsList.css'
+
 
 
 
@@ -10,7 +12,7 @@ render()
 
     return (
 
-        <ol>
+        <ol className='List'>
             {
                 this.props.repos.map((repo)=>
                  <Card repo={repo}/>)
