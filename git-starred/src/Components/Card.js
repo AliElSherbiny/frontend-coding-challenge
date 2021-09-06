@@ -10,7 +10,7 @@ render()
   let months = Math.floor(((Date.now()-Date.parse(this.props.repo.updated_at))/1000)/60/60/24/30) ; 
     return (
 
-        <li >
+        <li key={this.props.repo.key} >
          
             <div className='card'>
             <div className='imgDiv' >{ <img className='img'src={`${this.props.repo.owner.avatar_url}.png`} alt="User Profile Pic"  /> } </div>

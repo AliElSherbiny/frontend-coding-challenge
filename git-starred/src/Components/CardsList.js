@@ -15,7 +15,7 @@ render()
         <ol className='List'>
             {
                 this.props.repos.map((repo)=>
-                 <Card repo={repo}/>)
+                 <Card key={repo.name}repo={repo}/>)
             }
 
         </ol>

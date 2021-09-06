@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import axios from 'axios'
 
-  axios.defaults.baseURL = 'https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc';
+  axios.defaults.baseURL = 'https://api.github.com/search';
 
   axios.interceptors.response.use(
   response => { console.log(' response received successfully ');return response; }, 
