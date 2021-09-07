@@ -72,7 +72,7 @@ state = {
       <div className="header">
          <div className="content">GIT MOST STARRED REPOS</div>
          <img src={logo} alt="github logo" className="headerimg"/>
-         </div>
+      </div>
       {
       this.state.total?
       (<CardsList repos={this.state.repos}/>):(null)

@@ -6,15 +6,12 @@
 
 border:12px solid black;
 
-/* background: rgb(2,0,36); 
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(71,91,171,0.5441526952577906) 100%, rgba(0,212,255,1) 100%); */
-
 background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,192,203,1) 100%, rgba(0,212,255,1) 100%);
 
 font-size: 20px ;
 
-width:800px; 
+width:950px; 
 height: 320px;
 
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -50,9 +47,10 @@ border-radius: 25px;
 .text
 {
     /*display: block;*/
-    display: inline-block;
+    /* display: inline-block; */
     float:left;
     font-family: 'Century Gothic';
+    
     
 }
 
@@ -62,7 +60,7 @@ border-radius: 25px;
     margin-top: 30px;
     margin-left: 70px;
      font-size: 30px;
-     width:500px;
+     width:600px;
      border: 2px solid black; 
 }
 
@@ -70,36 +68,35 @@ border-radius: 25px;
     color: #D3D3D3;
     margin-top: 50px;
     margin-bottom: 10px;
-    /* margin-right: 10px; */
+    width:600px;
     font-size: 2vh;
     margin-left: 70px;
-     
-     width:500px;
+    
      /*border: 2px solid black; */
 
 }
 
-.etc
+.more
 {
-    margin-top: 50px;
     display:flex;
     margin-left: 65px;
-}
-
-.etc-child{
-    flex-direction: row;
+    padding:1em;
     
 }
 
-.star{
+
+.star-issue{
     border: 2px solid black;
     width: 150px;
     margin: 10px; 
     margin-bottom: 10px;
+    
 }
 
 .date
 {
-    margin: 0.5vw; 
+     width:300px;
     color: white;
+    
+    
 }

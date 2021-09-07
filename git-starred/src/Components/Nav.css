@@ -5,9 +5,6 @@ width:100%;
 height:100px;
 background: rgb(103, 100, 163);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(71,164,171,0.5441526952577906) 100%, rgba(0,212,255,1) 100%);
- 
-/* background-color: cadetblue; */
-
 }
 
 .button > .next 
@@ -38,12 +35,13 @@ border: 5px solid wheat;
 
 .next:hover {
     box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
+    cursor: pointer;
   }
 
 .prev:hover {
     box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
+    cursor: pointer;
 }
-
 
 button:disabled {
   background-color: grey;

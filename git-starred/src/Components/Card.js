@@ -17,10 +17,10 @@ render()
                 <div className='text'>
                     <div className='reponame'>{this.props.repo.name}</div>
                     <div className='repodesc'>{this.props.repo.description?(this.props.repo.description):('No Description provided')}</div>
-                    <div className='etc'>
-                        <div className='etc-child star'>{this.props.repo.stargazers_count+' STARS'}</div>
-                        <div className='etc-child star'>{this.props.repo.open_issues_count+' ISSUES'}</div>
-                        <div className='etc-child date'>{'UPDATED '+months+' months ago by '+this.props.repo.owner.login}</div>                  
+                    <div className='more'>
+                        <div className='more-child star-issue'>{this.props.repo.stargazers_count+' STARS'}</div>
+                        <div className='more-child star-issue'>{this.props.repo.open_issues_count+' ISSUES'}</div>
+                        <div className='more-child date'>{'UPDATED '+months+' months ago by '+this.props.repo.owner.login}</div>                  
                     </div>
                 </div>
              </div>
