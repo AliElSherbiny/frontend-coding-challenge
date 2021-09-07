@@ -40,6 +40,11 @@ border: 5px solid wheat;
     box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
   }
 
-  .prev:hover {
+.prev:hover {
     box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
-  }
+}
+
+
+button:disabled {
+  background-color: grey;
+}
