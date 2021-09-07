@@ -1,0 +1,45 @@
+.button
+{
+font: 20px bold 'Century Gothic';
+width:100%;
+height:100px;
+background: rgb(103, 100, 163);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(71,164,171,0.5441526952577906) 100%, rgba(0,212,255,1) 100%);
+ 
+/* background-color: cadetblue; */
+
+}
+
+.button > .next 
+{
+float : right;
+color: wheat;
+margin-right: 50px;
+margin-top: 20px;
+width:150px;
+height :70px;
+border-radius: 25%;
+border: 5px solid wheat;
+
+
+}
+
+.button > .prev{
+    float: left;
+    color: wheat;
+    margin-left: 50px;
+    margin-top: 20px;
+    width:150px;
+    height :70px;
+    border-radius: 25%;
+    border: 5px solid wheat;
+
+}
+
+.next:hover {
+    box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
+  }
+
+  .prev:hover {
+    box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
+  }

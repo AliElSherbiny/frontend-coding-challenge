@@ -27,10 +27,10 @@ render()
 {
 
     return(
-<Fragment> 
-    <button disabled={this.MaxPageReached()} onClick={()=>this.props.navigate('+')}>Next</button>
-    <button disabled={this.initPageReached()} onClick={()=>this.props.navigate('-')}>Previous</button>
-</Fragment>
+<div className='button' > 
+    <button className='prev ' disabled={this.initPageReached()} onClick={()=>this.props.navigate('-')}>Previous</button>
+    <button className='next ' disabled={this.MaxPageReached()} onClick={()=>this.props.navigate('+')}>Next</button>  
+</div>
 
     )
 }
