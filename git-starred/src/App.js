@@ -5,6 +5,8 @@ import Nav from './Components/Nav'
 import axios from 'axios'
 import logo from './Logos/github.png';
 
+
+
 class App extends Component {
 state = {
   total:'',
@@ -12,6 +14,8 @@ state = {
   repos:[],
   update:'false'
 }
+
+
   componentDidMount()
   {
     (axios.get ('repositories?q=created:>2017-10-22&sort=stars&order=desc&page='+this.state.pageNumber))
@@ -26,20 +30,38 @@ state = {
     .then(this.setState({update:false})))  
   }
 
-  inc = ()=>
+  inc = (sign)=>
   {
+
     const displayedContacts = 30 ;
     const initialPage = 1 ;
-    if (this.state.pageNumber<= (this.state.total/displayedContacts))
+    const lastPage = Math.floor(this.state.total/displayedContacts);
+
+    if (sign === '+')
+    {
+    if (this.state.pageNumber< lastPage )
     {
       this.setState((prevState)=>({pageNumber:prevState.pageNumber+1,update:true}),()=>(console.log(this.state.pageNumber)))
-
     }
     else
     {
       this.setState((prevState)=>({pageNumber:1}))
-
     }
+  }
+
+  else if (sign ==='-')
+  {
+    if (this.state.pageNumber> initialPage )
+    {
+      this.setState((prevState)=>({pageNumber:prevState.pageNumber-1,update:true}),()=>(console.log(this.state.pageNumber)))
+    }
+    else
+    {
+      this.setState((prevState)=>({pageNumber:1}))
+    }
+  }
+
+  else {}
 
   }
 
@@ -55,7 +77,7 @@ state = {
       this.state.total?
       (<CardsList repos={this.state.repos}/>):(null)
       }
-     <Nav navigate={this.inc}/>
+     <Nav navigate={this.inc} currentPage={this.state.pageNumber} totalPages={this.state.total}/>
     </div>
   );
 }
