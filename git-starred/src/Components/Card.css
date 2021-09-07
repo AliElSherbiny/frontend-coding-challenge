@@ -1,103 +1,85 @@
-.card 
-{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom:30px;
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 
-border:12px solid black;
+  border: 12px solid black;
 
-background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,192,203,1) 100%, rgba(0,212,255,1) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 192, 203, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 
-font-size: 20px ;
+  font-size: 20px;
 
-width:950px; 
-height: 320px;
-max-width: 100%;
+  width: 950px;
+  height: 320px;
+  max-width: 100%;
 
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-transition: 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 
-display:flex;
+  display: flex;
 
-border-radius: 25px;
-
+  border-radius: 25px;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(100,100,100,100);
-  }
-
-
-.imgDiv
-{
-    margin-bottom:auto;
-    margin-top:auto;
-    margin-left: 18px;
+  box-shadow: 0 8px 16px 0 rgba(100, 100, 100, 100);
 }
 
-.img
-{
-    width:200px; 
-    height: 200px;
-    border-radius: 50%;
-    
-    
+.imgContainer {
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: 18px;
 }
 
-.text
-{
-    /*display: block;*/
-    /* display: inline-block; */
-    float:left;
-    font-family: 'Century Gothic';
-    
-    
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.reponame
-{
-    color: white;
-    margin-top: 30px;
-    margin-left: 70px;
-     font-size: 30px;
-     width:600px;
-     border: 2px solid black; 
+.text {
+  float: left;
+  font-family: "Century Gothic";
 }
 
-.repodesc{
-    color: #D3D3D3;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    width:600px;
-    font-size: 2vh;
-    margin-left: 70px;
-    
-     /*border: 2px solid black; */
-
+.reponame {
+  color: white;
+  margin-top: 30px;
+  margin-left: 70px;
+  font-size: 30px;
+  width: 600px;
+  border: 2px solid black;
 }
 
-.more
-{
-    display:flex;
-    margin-left: 65px;
-    padding:1em;
-    
+.repodesc {
+  color: #d3d3d3;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 600px;
+  font-size: 2vh;
+  margin-left: 70px;
 }
 
-
-.star-issue{
-    border: 2px solid black;
-    width: 150px;
-    margin: 10px; 
-    margin-bottom: 10px;
-    
+.more-text {
+  display: flex;
+  margin-left: 65px;
+  padding: 1em;
 }
 
-.date
-{
-     width:300px;
-    color: white;
-    
-    
+.star-issue {
+  border: 2px solid black;
+  width: 150px;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.date {
+  width: 300px;
+  color: white;
 }

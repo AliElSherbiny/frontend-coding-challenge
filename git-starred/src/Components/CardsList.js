@@ -9,7 +9,7 @@ class CardsList extends Component
 {
 render()
 {
-
+    /*Renders a list of cards, each card resembles a repo */
     return (
 
         <ol className='List'>
