@@ -4,6 +4,7 @@ import CardsList from './Components/CardsList'
 import Nav from './Components/Nav'
 import axios from 'axios'
 import logo from './Logos/github.png';
+import Loader from 'react-loader-spinner';
 
 
 
@@ -12,22 +13,26 @@ state = {
   total:'',
   pageNumber:1,
   repos:[],
-  update:'false'
+  update:'false',
+  loading:true
 }
 
 
   componentDidMount()
   {
     (axios.get ('repositories?q=created:>2017-10-22&sort=stars&order=desc&page='+this.state.pageNumber))
-    .then ((repos)=>(this.setState((prevState)=>({total:repos.data.total_count,repos:repos.data.items}),()=>(console.log(this.state)))))  
+    .then ((repos)=>(this.setState((prevState)=>({total:repos.data.total_count,repos:repos.data.items,loading:false}),()=>(console.log(this.state)))))  
   }
 
   componentDidUpdate()
   {
-    (this.state.update)&&
-    (axios.get ('repositories?q=created:>2017-10-22&sort=stars&order=desc&page='+this.state.pageNumber)
-    .then ((repos)=>(this.setState((prevState)=>({total:repos.data.total_count,repos:repos.data.items}),()=>(console.log("update")))))
-    .then(this.setState({update:false})))  
+    if(this.state.update)
+    {
+    this.setState({loading:true});
+    axios.get ('repositories?q=created:>2017-10-22&sort=stars&order=desc&page='+this.state.pageNumber)
+    .then ((repos)=>(this.setState((prevState)=>({total:repos.data.total_count,repos:repos.data.items,loading:false}),()=>(console.log("update")))))
+    .then(this.setState({update:false}));
+    }
   }
 
   inc = (sign)=>
@@ -69,13 +74,14 @@ state = {
   render(){
   return (
     <div className="App">
+      
       <div className="header">
          <div className="content">GIT MOST STARRED REPOS</div>
          <img src={logo} alt="github logo" className="headerimg"/>
       </div>
       {
-      this.state.total?
-      (<CardsList repos={this.state.repos}/>):(null)
+      this.state.loading?
+      (<Loader type="ThreeDots" color="black" height="800" width="800" />):(<CardsList repos={this.state.repos}/>)
       }
      <Nav navigate={this.inc} currentPage={this.state.pageNumber} totalPages={this.state.total}/>
     </div>
